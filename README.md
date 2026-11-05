@@ -13,10 +13,10 @@ Ce projet est mené en mode Agile en utilisant le framework Scrum sous GitHub.
 * Scrum Master : [Votre Nom / Prénom]
 * Product Owner : [Nom du PO]
 * Équipe de Développeurs :
-  * Morado Antoine
-  * Mdéré Khaled
-  * Pierrot Gabriel
-  * Mountaz Wail
+  * Morado Antoine [@Crepe17](https://github.com/Crepe17)
+  * Mdéré Khaled [@Negrus976](https://github.com/Negrus976)
+  * Pierrot Gabriel [@gabriel-pierrot](https://github.com/gabriel-pierrot)
+  * Moumtaz Wail
 
 ## Stack Technique Imposée
 
