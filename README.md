@@ -13,9 +13,10 @@ Ce projet est mené en mode Agile en utilisant le framework Scrum sous GitHub.
 * Scrum Master : [Votre Nom / Prénom]
 * Product Owner : [Nom du PO]
 * Équipe de Développeurs :
-  * [Membre 1]
-  * [Membre 2]
-  * [Membre 3]
+  * Morado Antoine
+  * Mdéré Khaled
+  * Pierrot Gabriel
+  * Mountaz Wail
 
 ## Stack Technique Imposée
 
