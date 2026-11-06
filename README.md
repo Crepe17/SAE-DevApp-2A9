@@ -60,7 +60,7 @@ Le projet est découpé en sprints de 2 semaines gérés via l'onglet Projects (
 * [US] Espace Client & Sécurité : Créer un compte, gérer son carnet d'adresses et consulter l'historique des commandes.
 * [US] Panier & Paiement : Sélectionner le mode de livraison et effectuer un paiement sécurisé (CB, PayPal, Virement).
 * [US] Avis Clients Vérifiés : Déposer une note (sur 5) et un commentaire après réception de la commande.
-* [US] Console d'Administration : Espace sécurisé pour la gestion du contenu, des stocks et des promotions.
+* [US] Console d'Administration : Espace sécurisé pour la gestion du contenu, des stocks et des promotions .
 
 ## Installation & Lancement en local
 
