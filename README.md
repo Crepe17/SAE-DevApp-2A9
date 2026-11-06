@@ -16,7 +16,7 @@ Ce projet est mené en mode Agile en utilisant le framework Scrum sous GitHub.
   * Morado Antoine [@Crepe17](https://github.com/Crepe17)
   * Mdéré Khaled [@Negrus976](https://github.com/Negrus976)
   * Pierrot Gabriel [@gabriel-pierrot](https://github.com/gabriel-pierrot)
-  * Moumtaz Wail
+  * Moumtaz Wail [@wawa3133](https://github.com/wawa3133)
 
 ## Stack Technique Imposée
 
