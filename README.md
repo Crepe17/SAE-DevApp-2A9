@@ -55,7 +55,7 @@ Le projet est découpé en sprints de 2 semaines gérés via l'onglet Projects (
 
 ## Principales User Stories (Backlog Produit)
 
-* [US] Moteur de Recherche & Filtrage : Filtrer les produits par licence, marque, intervalle de prix et avis.
+* [[US](https://github.com/Crepe17/SAE-DevApp-2A9/issues/2#issue-6204252160)] Moteur de Recherche & Filtrage : Filtrer les produits par licence, marque, intervalle de prix et avis.
 * [US] Gestion Stricte des Ruptures de Stock : Afficher l'état des stocks et désactiver le bouton d'achat en cas d'épuisement.
 * [US] Espace Client & Sécurité : Créer un compte, gérer son carnet d'adresses et consulter l'historique des commandes.
 * [US] Panier & Paiement : Sélectionner le mode de livraison et effectuer un paiement sécurisé (CB, PayPal, Virement).
