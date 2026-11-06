@@ -10,7 +10,7 @@ Ce projet est mené en mode Agile en utilisant le framework Scrum sous GitHub.
 
 ## Composition de l'Équipe (MOE)
 
-* Scrum Master : [Morado Antoine]
+* Scrum Master : Morado Antoine
 * Product Owner : [Nom du PO]
 * Équipe de Développeurs :
   * Morado Antoine [@Crepe17](https://github.com/Crepe17)
