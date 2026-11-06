@@ -74,3 +74,4 @@ Le projet est découpé en sprints de 2 semaines gérés via l'onglet Projects (
 
 3. Importer la base de données :
    Exécuter les scripts situés dans le dossier `sql/` dans l'instance MySQL.
+   
