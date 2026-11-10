@@ -24,3 +24,16 @@ def lire_config():
     os.close(fd)
     print ("config : ", config)
 
+
+def lire_ressource():
+    fd = os.open("python/Inputs/test1/ressources.json", os.O_RDONLY)
+    buffer =""
+    while True:
+        octets = os.read(fd,1024)
+        if not octets:
+            break
+        buffer+=octets.decode("utf-8")
+    os.close(fd)
+    dictonaire_res = json.loads(buffer)
+    return dictonaire_res
+
