@@ -62,6 +62,10 @@ Le projet est découpé en sprints de 2 semaines gérés via l'onglet Projects (
 * [US] Avis Clients Vérifiés : Déposer une note (sur 5) et un commentaire après réception de la commande.
 * [US] Console d'Administration : Espace sécurisé pour la gestion du contenu, des stocks et des promotions .
 
+## Télétravail
+
+12/11/2026 - Télétravail
+
 ## Installation & Lancement en local
 
 1. Cloner le dépôt :
