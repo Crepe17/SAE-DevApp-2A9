@@ -1,4 +1,3 @@
-import csv
 import json
 import os
 
@@ -16,12 +15,11 @@ def lire_config():
       ligne, buffer = buffer.split("\n", 1)
       ligne = ligne.strip()
 
-      if ligne and not ligne.startswith("#"):
-        if "=" in ligne:
-          cle, valeur = ligne.split("=", 1)
-          cle = cle.strip()
-          valeur = valeur.strip()
-          config[cle] = valeur
+      if ligne and not ligne.startswith("#") and "=" in ligne:
+        cle, valeur = ligne.split("=", 1)
+        cle = cle.strip()
+        valeur = valeur.strip()
+        config[cle] = valeur
   os.close(fd)
   print("config : ", config)
 

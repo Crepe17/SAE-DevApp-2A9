@@ -31,6 +31,12 @@ Ce projet est mené en mode Agile en utilisant le framework Scrum sous GitHub.
 ```text
 .
 ├── docs/                   # Documentations techniques, fonctionnelles & SEP
+├── java/                   # Interface Java lançant le script python
+├── python/                 # Script python et test
+│   ├── Code/               # Algos et codes de lecture/écriture des fichiers
+│   ├── Inputs/             # Contient des sous répertoires des entrés des Test
+│   ├── Outputs/            # Contient des sous répertoires des sorties de chaque Test d'Inputs
+│   └── README.md           # Présentation du projet programmation système
 ├── src/                    # Code source du site web (Front-Office & Back-Office)
 │   ├── assets/             # Images, styles CSS et médias
 │   ├── config/             # Fichiers de configuration (connexion BDD)
