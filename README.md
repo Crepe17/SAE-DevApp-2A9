@@ -71,6 +71,7 @@ Le projet est découpé en sprints de 2 semaines gérés via l'onglet Projects (
 ## Télétravail
 
 12/11/2026 - Télétravail
+20/11/2026 - Télétravail
 
 ## Installation & Lancement en local
 
