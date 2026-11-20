@@ -2,10 +2,10 @@ from models import Processus, Ressources, Resultat
 from scheduler import simuler
 
 
-def executer_fifo(processus: list[Processus], ressources: Ressources) -> Resultat:
-    """Ordonnancement FIFO (premier arrivé, premier servi), non préemptif."""
-    return simuler("FIFO", processus, ressources, quantum=None)
-
-def executer_rr(processus: list[Processus], ressources: Ressources, quantum: int) -> Resultat:
-    """Ordonnancement Round Robin (tourniquet) avec quantum."""
+def executer(processus: list[Processus], ressources: Ressources, quantum: int | None = None) -> Resultat:
+    """Execute un ordonnancement Round Robin (tourniquet) ou FIFO en fonction du paramètre quantum.
+    S'il est présent c'est RR sinon FIFO"""
+    
+    if quantum is None :
+        return simuler("FIFO", processus, ressources, quantum=None)
     return simuler("RR", processus, ressources, quantum=quantum)

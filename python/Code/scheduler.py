@@ -1,15 +1,3 @@
-"""Moteur de simulation commun à FIFO et Round Robin.
-
-Un tick = une unité de temps.
-- quantum=None : non préemptif (FIFO strict, un processus va jusqu'au bout)
-- quantum=N    : préemptif, un processus est remis en fin de file après N ticks
-
-Règles mémoire : un processus réserve sa RAM à son premier démarrage et la
-libère à sa fin. En FIFO, si la tête de file ne rentre pas en RAM, personne ne
-la double. En Round Robin, on prend le premier processus éligible (déjà démarré
-ou qui rentre en RAM), sinon les processus déjà démarrés resteraient bloqués
-derrière un processus qui attend de la RAM.
-"""
 from copy import deepcopy
 from dataclasses import dataclass, field
 
@@ -25,6 +13,16 @@ class _Cpu:
 
 
 def _valider(processus: list[Processus], ressources: Ressources) -> None:
+    """Vérifie que les processus sont valide en vérifiant s'ils respectent
+    les contraintes de mémoire notamment.
+
+    Args:
+        processus (list[Processus]): liste des processus à vérifier
+        ressources (Ressources): ressources disponible
+
+    Raises:
+        ValueError: un processus spécifique demande beaucoup trop de ram
+    """    
     for p in processus:
         if p.ram > ressources.ram_totale:
             raise ValueError(
@@ -33,6 +31,16 @@ def _valider(processus: list[Processus], ressources: Ressources) -> None:
 
 
 def _prochain(file: list[Processus], ram_libre: int, strict: bool) -> Processus | None:
+    """Renvoie le prochain processus à passer dans une liste de processus
+
+    Args:
+        file (list[Processus]): liste des processus dans la file d'attente
+        ram_libre (int): quantite de RAM disponible
+        strict (bool): exprime s'il on as besoin d'un processus suivant
+
+    Returns:
+        Processus | None: renvoie les processus pouvant être ajouter à la file
+    """
     for i, p in enumerate(file):
         if p.debut is not None or p.ram <= ram_libre:
             return file.pop(i)
@@ -55,6 +63,18 @@ def _segments(cpu: _Cpu, ram_par_id: dict[str, int]) -> list[Allocation]:
 
 def simuler(nom: str, processus: list[Processus], ressources: Ressources,
             quantum: int | None = None) -> Resultat:
+    """Prend en paramètre une politique ainsi que les processus, ressources
+    et quantum de temps pour réaliser une simulation d'une politique.
+
+    Args:
+        nom (str): nom de la politique à simuler
+        processus (list[Processus]): liste des processus qu'on vas simuler
+        ressources (Ressources): ressources alloué à la simulation
+        quantum (int | None, optional): quantum de temps. Defaults to None.
+
+    Returns:
+        Resultat: résultat de la simulation
+    """    
     _valider(processus, ressources)
     procs = deepcopy(processus)
     a_venir = sorted(procs, key=lambda p: p.arrivee)

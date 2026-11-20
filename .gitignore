@@ -2,3 +2,8 @@
 .lock
 venv/
 __*
+metriques.csv
+resultats_fifo_allocations.csv 
+resultats_fifo_global.csv
+resultats_roundrobin_allocations.csv
+resultats_roundrobin_global.csv
