@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.tournois.ui.controller.AppMainFrameController">
+   <top>
+      <VBox>
+         <children>
+            <MenuBar fx:id="menuBar">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Configuration">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+                  <Menu text="?">
+                     <items>
+                        <MenuItem fx:id="menuAPropos" onAction="#doAfficherAPropos" text="À propos" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <HBox alignment="CENTER_RIGHT" style="-fx-padding: 4; -fx-background-color: #f4f4f4;">
+               <children>
+                  <Label fx:id="labelUtilisateur" style="-fx-font-style: italic; -fx-padding: 0 10 0 0;" text="Non connecté" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <StackPane fx:id="mainContentPane" />
+   </center>
+</BorderPane>

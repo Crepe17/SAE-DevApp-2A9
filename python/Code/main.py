@@ -15,8 +15,8 @@ ALGORITHMES = {
 }
 
 DOSSIER = Path(__file__).resolve().parent
-CONFIG_PAR_DEFAUT = DOSSIER / "../Inputs/test2/"
-DOSSIER_OUT = DOSSIER / "../Outputs/test2/"
+CONFIG_PAR_DEFAUT = DOSSIER / "../Inputs/test1/"
+DOSSIER_OUT = DOSSIER / "../Outputs/test1/"
 
 chemin_in = CONFIG_PAR_DEFAUT
 chemin_out = DOSSIER_OUT
