@@ -1,4 +1,4 @@
-package fr.visudo.ui.controller;
+package fr.visudo.ui.model;
 
 public class MetriqueLigne {
     private final String algo;
