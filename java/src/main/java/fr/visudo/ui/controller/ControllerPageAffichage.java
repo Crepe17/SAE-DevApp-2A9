@@ -1,5 +1,8 @@
 package fr.visudo.ui.controller;
 
+import fr.visudo.ui.model.MetriqueLigne;
+import fr.visudo.ui.model.ProcessusLigne;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
