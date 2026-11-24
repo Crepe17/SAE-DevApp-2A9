@@ -41,12 +41,6 @@ public class GanttParProcesseurController {
     @FXML
     private void remettreAZero() {
         GraphicsContext gc = canvas.getGraphicsContext2D();
-
-        gc.clearRect(
-            0,
-            0,
-            canvas.getWidth(),
-            canvas.getHeight()
-        );
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
     }
 }

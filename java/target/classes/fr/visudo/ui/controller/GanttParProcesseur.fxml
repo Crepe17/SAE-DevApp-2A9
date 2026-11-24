@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GanttParProcesseurController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.visudo.ui.controller.GanttParProcesseurController">
    <center>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
@@ -25,10 +24,12 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lancer la simulation" />
                   <Separator prefWidth="200.0" />
-                  <Button fx:id="simulerFIFO" mnemonicParsing="false" text="FIFO" onAction="#simulerFIFO" />
-                  <Button fx:id="simulerRR" mnemonicParsing="false" text="Round robin" onAction="#simulerRR" />
+                  <Button fx:id="simulerFIFO" mnemonicParsing="false" onAction="#simulerFIFO" text="FIFO" />
+                  <Button fx:id="simulerRR" mnemonicParsing="false" onAction="#simulerRR" text="Round robin" />
                   <Separator prefWidth="200.0" />
-                  <Button fx:id="RAZ" mnemonicParsing="false" text="Remettre à zéro" onAction="#remettreAZero" />
+                  <Button fx:id="RAZ" mnemonicParsing="false" onAction="#remettreAZero" text="Remettre à zéro" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres graphiques" />
+                  <Separator prefWidth="200.0" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
