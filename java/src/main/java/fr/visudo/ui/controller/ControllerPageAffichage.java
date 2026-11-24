@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+
+import fr.visudo.ui.model.MetriqueLigne;
+import fr.visudo.ui.model.ProcessusLigne;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -104,68 +107,7 @@ public class ControllerPageAffichage {
         energieLineChart.getData().setAll(serieDispo, serieConso);
     }
 
-    public void chargerDonnees(Path fichierProcessus, Path fichierMetriques, Path fichierEnergie) throws IOException {
-        ObservableList<ProcessusLigne> processus = FXCollections.observableArrayList();
-        List<String> lignesProc = Files.readAllLines(fichierProcessus);
-        for (int i = 1; i < lignesProc.size(); i++) {
-            String ligne = lignesProc.get(i).trim();
-            if (ligne.isEmpty()) {
-                continue;
-            }
-            String[] c = ligne.split(",");
-            processus.add(new ProcessusLigne(
-                    c[0].trim(),
-                    Integer.parseInt(c[1].trim()),
-                    Integer.parseInt(c[2].trim()),
-                    Integer.parseInt(c[3].trim()),
-                    Integer.parseInt(c[4].trim())
-            ));
-        }
-        processusTableView.setItems(processus);
-
-        ObservableList<MetriqueLigne> metriques = FXCollections.observableArrayList();
-        List<String> lignesMet = Files.readAllLines(fichierMetriques);
-        for (int i = 1; i < lignesMet.size(); i++) {
-            String ligne = lignesMet.get(i).trim();
-            if (ligne.isEmpty()) {
-                continue;
-            }
-            String[] c = ligne.split(",");
-            metriques.add(new MetriqueLigne(
-                    c[0].trim(),
-                    Double.parseDouble(c[1].trim()),
-                    Double.parseDouble(c[2].trim()),
-                    Integer.parseInt(c[3].trim()),
-                    Double.parseDouble(c[4].trim()),
-                    Double.parseDouble(c[5].trim()),
-                    Double.parseDouble(c[6].trim())
-            ));
-        }
-        metriquesTableView.setItems(metriques);
-        mettreAJourBarChart(metriques);
-
-        XYChart.Series<Number, Number> serieDispo = new XYChart.Series<>();
-        serieDispo.setName("Énergie disponible");
-
-        XYChart.Series<Number, Number> serieConso = new XYChart.Series<>();
-        serieConso.setName("Énergie consommée");
-
-        List<String> lignesEner = Files.readAllLines(fichierEnergie);
-        for (int i = 1; i < lignesEner.size(); i++) {
-            String ligne = lignesEner.get(i).trim();
-            if (ligne.isEmpty()) {
-                continue;
-            }
-            String[] c = ligne.split(",");
-            int instant = Integer.parseInt(c[0].trim());
-            double dispo = Double.parseDouble(c[1].trim());
-            double conso = Double.parseDouble(c[2].trim());
-
-            serieDispo.getData().add(new XYChart.Data<>(instant, dispo));
-            serieConso.getData().add(new XYChart.Data<>(instant, conso));
-        }
-        energieLineChart.getData().setAll(serieDispo, serieConso);
-    }
+    
 
     private void mettreAJourBarChart(List<MetriqueLigne> metriques) {
         XYChart.Series<String, Number> serieAttente = new XYChart.Series<>();
