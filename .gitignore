@@ -3,6 +3,7 @@
 *.class
 *.jar
 .vscode/
+target/
 venv/
 __*
 metriques.csv
