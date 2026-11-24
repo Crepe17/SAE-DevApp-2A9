@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
@@ -39,16 +38,13 @@
                     </columnResizePolicy>
                 </TableView>
 
-                <Label style="-fx-font-weight: bold;" text="Métriques globales par politique" />
+                <Label style="-fx-font-weight: bold;" text="Métriques globales (FIFO vs RR)" />
                 <TableView fx:id="metriquesTableView" prefHeight="170.0">
                     <columns>
                         <TableColumn fx:id="colAlgo" text="Politique" />
                         <TableColumn fx:id="colAttenteMoy" text="Attente moy." />
                         <TableColumn fx:id="colReponseMoy" text="Réponse moy." />
                         <TableColumn fx:id="colMakespan" text="Makespan" />
-                        <TableColumn fx:id="colEnergieConso" text="Énergie cons." />
-                        <TableColumn fx:id="colEnergieDispo" text="Énergie dispo" />
-                        <TableColumn fx:id="colTauxEnergie" text="Taux (%)" />
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -61,7 +57,7 @@
                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                 </padding>
 
-                <BarChart fx:id="metriquesBarChart" title="Comparaison des métriques" VBox.vgrow="ALWAYS">
+                <BarChart fx:id="metriquesBarChart" title="Comparaison FIFO vs RR" VBox.vgrow="ALWAYS">
                     <xAxis>
                         <CategoryAxis label="Politique" />
                     </xAxis>
@@ -69,15 +65,6 @@
                         <NumberAxis label="Valeur" />
                     </yAxis>
                 </BarChart>
-
-                <LineChart fx:id="energieLineChart" createSymbols="false" title="Énergie consommée vs disponible" VBox.vgrow="ALWAYS">
-                    <xAxis>
-                        <NumberAxis label="Temps" />
-                    </xAxis>
-                    <yAxis>
-                        <NumberAxis label="Énergie" />
-                    </yAxis>
-                </LineChart>
             </VBox>
 
         </SplitPane>
