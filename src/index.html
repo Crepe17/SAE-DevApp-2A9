@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imaginaire – Produits dérivés officiels de jeux vidéo</title>
+  <meta name="description" content="Figurines, vêtements, peluches et accessoires officiels de vos licences de jeux vidéo préférées. Expédition sous 48 h.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Imaginaire, accueil">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        Imaginaire
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#nouveautes">Nouveautés</a>
+        <a href="#categories">Catalogue</a>
+        <a href="#licences">Licences</a>
+      </nav>
+      <form class="search" role="search" action="catalogue.html">
+        <label class="sr-only" for="q">Rechercher</label>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" name="q" type="search" placeholder="Une licence, un produit…">
+      </form>
+      <div class="header-actions">
+        <a class="icon-btn" href="compte.html" aria-label="Mon compte">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <a class="icon-btn cart" href="panier.html" aria-label="Panier, 2 articles">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 016 0"/></svg>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="label">Collection officielle / The Legend of Zelda</p>
+        <h1>L’aventure ne s’arrête pas.</h1>
+        <p class="hero-sub">Vos univers prennent une autre dimension.</p>
+        <a class="btn" href="catalogue.html?licence=zelda">Explorer la collection Zelda
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+      <img class="hero-img" src="images/hero-zelda.jpg" width="1200" height="600" alt="Figurines amiibo Link de The Legend of Zelda" fetchpriority="high">
+    </section>
+
+    <section class="licences" id="licences" aria-label="Licences">
+      <div class="wrap licences-inner">
+        <p class="label">Les univers<br>qui nous animent</p>
+        <ul>
+          <li><a href="catalogue.html?licence=zelda">Zelda</a></li>
+          <li><a href="catalogue.html?licence=pokemon">Pokémon</a></li>
+          <li><a href="catalogue.html?licence=super-mario">Super Mario</a></li>
+          <li><a href="catalogue.html?licence=sonic">Sonic</a></li>
+          <li><a href="catalogue.html?licence=final-fantasy">Final Fantasy</a></li>
+        </ul>
+        <a class="link-more" href="catalogue.html">Tout voir ↗</a>
+      </div>
+    </section>
+
+    <section class="wrap section" id="nouveautes">
+      <div class="section-head">
+        <h2>Les articles du moment</h2>
+        <a class="link-more" href="catalogue.html">Toute la sélection ↗</a>
+      </div>
+      <div class="products">
+        <article class="product">
+          <span class="badge">Coup de cœur</span>
+          <button class="wish" type="button" aria-label="Ajouter LEGO Luigi à ma liste de souhaits">♡</button>
+          <img src="images/lego-luigi.webp" width="400" height="400" loading="lazy" alt="Figurine LEGO Luigi">
+          <p class="product-licence">Super Mario</p>
+          <h3><a href="produit.html?id=1">LEGO Luigi</a></h3>
+          <p class="price">35,90 €</p>
+        </article>
+        <article class="product">
+          <span class="badge">Best-seller</span>
+          <button class="wish" type="button" aria-label="Ajouter Pikachu à ma liste de souhaits">♡</button>
+          <img src="images/funko-pikachu.jpg" width="400" height="400" loading="lazy" alt="Figurine Funko Pop Pikachu">
+          <p class="product-licence">Pokémon</p>
+          <h3><a href="produit.html?id=2">FUNKO Figurine POP Pikachu</a></h3>
+          <p class="price">19,90 €</p>
+        </article>
+        <article class="product">
+          <button class="wish" type="button" aria-label="Ajouter la décoration Loot Llama à ma liste de souhaits">♡</button>
+          <img src="images/llama-fortnite.jpg" width="400" height="400" loading="lazy" alt="Décoration de sapin Loot Llama Fortnite">
+          <p class="product-licence">Fortnite</p>
+          <h3><a href="produit.html?id=3">Décoration Sapin – Loot Llama Fortnite</a></h3>
+          <p class="price">24,90 €</p>
+        </article>
+        <article class="product">
+          <span class="badge">Nouveau</span>
+          <button class="wish" type="button" aria-label="Ajouter la figurine Geralt de Riv à ma liste de souhaits">♡</button>
+          <img src="images/geralt.jpg" width="400" height="400" loading="lazy" alt="Figurine Geralt de Riv, The Witcher">
+          <p class="product-licence">The Witcher</p>
+          <h3><a href="produit.html?id=4">Figurine Geralt de Riv</a></h3>
+          <p class="price">79,90 €</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="categories">
+      <div class="section-head">
+        <h2>Catégories</h2>
+        <p class="label">Choisissez votre terrain de jeu</p>
+      </div>
+      <div class="categories">
+        <a class="category" href="catalogue.html?categorie=vetements">
+          <img src="images/cat-vetements.jpg" width="600" height="400" loading="lazy" alt="">
+          <span>Vêtements</span>
+        </a>
+        <a class="category" href="catalogue.html?categorie=figurines">
+          <img src="images/cat-figurines.jpg" width="600" height="400" loading="lazy" alt="">
+          <span>Figurines</span>
+        </a>
+        <a class="category" href="catalogue.html?categorie=accessoires">
+          <img src="images/cat-accessoires.png" width="600" height="400" loading="lazy" alt="">
+          <span>Accessoires</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="wrap reviews" aria-label="Avis clients">
+      <div class="rating">
+        <p class="rating-score"><span class="stars" aria-hidden="true">★★★★★</span> 4,8/5.</p>
+        <p class="muted">Plus de 1 200 avis.</p>
+      </div>
+      <blockquote class="review">
+        <p class="stars" aria-label="5 étoiles sur 5">★★★★★</p>
+        <p>La figurine est encore plus belle en vrai. Emballage impeccable, reçue en deux jours.</p>
+        <footer>Camille R. · Achat vérifié</footer>
+      </blockquote>
+      <blockquote class="review">
+        <p class="stars" aria-label="5 étoiles sur 5">★★★★★</p>
+        <p>Enfin une sélection qui a du goût. Le hoodie Ectoplasma ne me quitte plus.</p>
+        <footer>Thomas K. · Achat vérifié</footer>
+      </blockquote>
+    </section>
+
+    <section class="perks" aria-label="Nos engagements">
+      <ul class="wrap perks-inner">
+        <li><strong>Expédition sous 48 h</strong><span>Livraison offerte à partir de 60 €.</span></li>
+        <li><strong>Retours sous 30 jours</strong><span>Changez d’avis, on s’occupe du reste.</span></li>
+        <li><strong>Paiement sécurisé</strong><span>CB et PayPal.</span></li>
+      </ul>
+    </section>
+
+    <section class="newsletter">
+      <div class="wrap newsletter-inner">
+        <h2>S’abonner à la newsletter</h2>
+        <form action="newsletter.html" method="post">
+          <label class="sr-only" for="email">Votre adresse e-mail</label>
+          <div class="field">
+            <input id="email" name="email" type="email" placeholder="Votre adresse e-mail" required autocomplete="email">
+            <button type="submit" aria-label="S’abonner">↗</button>
+          </div>
+          <p class="muted small">En vous inscrivant, vous acceptez notre politique de confidentialité.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-logo">Imaginaire</p>
+        <p class="muted small">Vos univers préférés.<br>La sélection officielle pour tous les gamers.</p>
+      </div>
+      <nav aria-label="Explorer">
+        <h2 class="label">Explorer</h2>
+        <ul>
+          <li><a href="catalogue.html">Toutes les licences</a></li>
+          <li><a href="catalogue.html?categorie=vetements">Vêtements</a></li>
+          <li><a href="catalogue.html?categorie=figurines">Figurines</a></li>
+          <li><a href="catalogue.html?categorie=accessoires">Accessoires</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="À votre service">
+        <h2 class="label">À votre service</h2>
+        <ul>
+          <li><a href="livraison.html">Livraison &amp; retours</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="suivi.html">Suivre ma commande</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <p class="label">© 2026 Imaginaire · Tous les univers appartiennent à leurs ayants droit.</p>
+      <ul class="legal">
+        <li><a href="cgv.html">CGV</a></li>
+        <li><a href="confidentialite.html">Confidentialité</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li>FR / EUR €</li>
+      </ul>
+      <p class="payments"><b>VISA</b> <b>Mastercard</b> <b>PayPal</b></p>
+    </div>
+  </footer>
+</body>
+</html>

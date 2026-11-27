@@ -2,6 +2,9 @@
 .lock
 *.class
 *.jar
+*.jpg
+*.webp
+*.png
 .vscode/
 target/
 venv/
